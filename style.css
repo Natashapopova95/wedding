@@ -1,0 +1,623 @@
+:root {
+  --bg: #f6f3ef;
+  --gold: #c6a77d;
+  --text: #2d2d2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  /* transition: background-color 0.2s linear; */
+  background-color: #f9f7f7;
+  transition: background-color 1s ease;
+}
+
+@keyframes pageFade {
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: #ffff;
+  font-size: 60px;
+  font-family: "Cormorant Garamond";
+}
+h2 {
+  color: #751818;
+  font-size: 54px;
+  text-align: left;
+  margin-bottom: 30px;
+  font-family: "Cormorant Garamond";
+}
+p {
+  color: #434242;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.about__date {
+  color: #751818;
+  font-size: 60px;
+  text-align: left;
+  margin-bottom: 30px;
+  font-family: emoji;
+}
+
+.about__wrapp {
+  display: flex;
+  gap: 40px;
+}
+
+.about__item {
+  width: 50%;
+}
+
+.about__item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+section {
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== NAVIGATION ===== */
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 18px;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background: var(--gold);
+  transition: 0.4s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ===== BURGER ===== */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 26px;
+  height: 2px;
+  background: var(--text);
+  transition: 0.4s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(246, 243, 239, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  transform: translateY(-100%);
+  transition: 0.6s ease;
+  z-index: 99;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--text);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  height: 100vh;
+  background: url("img/banner.png") center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1.5s ease 0.5s forwards;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: reveal 1.5s ease 1s forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SECTION ANIMATION ===== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.2s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== COUNTDOWN ===== */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  font-size: 28px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.countdown div {
+  position: relative;
+}
+
+.countdown strong {
+  font-size: 40px;
+  display: block;
+  color: var(--gold);
+}
+
+/* ===== BUTTON ===== */
+
+.btn {
+  margin-top: 40px;
+  padding: 14px 40px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: 0.4s;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: white;
+}
+
+.about__date {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.about__date.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wedding-schedule h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.wedding-schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Анимация появления сверху */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Левая колонка */
+.wedding-schedule__left {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.venue-desc {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #6b5b5b;
+}
+
+.venue-info h3 {
+  font-size: 35px;
+  margin-bottom: 5px;
+  color: #751818;
+  text-align: left;
+  font-family: "Cormorant Garamond";
+}
+
+.venue-info p {
+  font-size: 17px;
+  color: #7d6a6a;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #e0d6d6;
+  background: linear-gradient(135deg, #fdf6f6, #f7ecec);
+  margin-top: 20px;
+}
+
+/* Левая колонка остаётся без изменений */
+.wedding-schedule__left {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.schedule-list .schedule-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(200, 180, 180, 0.15);
+
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+
+.schedule-list .schedule-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.schedule-list .schedule-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(200, 180, 180, 0.25);
+}
+
+.wedding-schedule__right {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 14px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(200, 180, 180, 0.15);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.schedule-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(200, 180, 180, 0.25);
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 600;
+  width: 90px;
+  color: #c56c34;
+  flex-shrink: 0;
+}
+
+.event {
+  font-size: 18px;
+  color: #6b5b5b;
+}
+
+.rsvp-section {
+  position: relative;
+  height: 600px; /* высота секции */
+  overflow: hidden;
+}
+
+.rsvp-content h2 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.rsvp-content p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.rsvp-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120%;
+  height: 150%;
+  background-image: url("img/img2.png");
+  background-size: cover;
+  background-position: center;
+  transform: translateX(-50%) translateY(0);
+  filter: brightness(0.7); /* затемнение */
+  z-index: 1;
+  will-change: transform;
+}
+
+.rsvp-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  padding-top: 150px;
+}
+
+.counter {
+  margin: 70px 0;
+}
+
+/* Адаптив */
+@media (max-width: 860px) {
+  .rsvp-section {
+    padding: 60px 0;
+  }
+  .wedding-schedule {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .wedding-schedule__left,
+  .wedding-schedule__right {
+    text-align: center;
+  }
+  .time {
+    width: auto;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .countdown {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__wrapp {
+    flex-wrap: wrap;
+  }
+  .about__item {
+    width: 100%;
+  }
+}
+
+.date {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255 255 255 / 25%);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: 300;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  color: #751818;
+  font-family: emoji;
+}
+
+.label {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@media (max-width: 480px) {
+  .timer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .number {
+    font-size: 1.8rem;
+  }
+}
+
+.feedback-section {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.feedback-image {
+  flex: 1 1 400px;
+  background: url("img/img2.png") center/cover no-repeat;
+  min-height: 300px;
+}
+.feedback-form-container {
+  flex: 1 1 400px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.feedback-form-container h2 {
+  margin-top: 0;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.radio-group {
+  margin: 10px 0;
+}
+.radio-group label {
+  display: inline;
+  font-weight: normal;
+  margin-right: 15px;
+}
+.submit-btn {
+  background-color: #d4a373;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.submit-btn:hover {
+  background-color: #bc8a5f;
+}
+#form-status {
+  margin-top: 15px;
+  text-align: center;
+}
