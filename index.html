@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Николай & Евгения</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">Николай & Евгения</div>
+        <div class="menu">
+          <a href="#about">О нас</a>
+          <a href="#date">Дата</a>
+          <a href="#rsvp">Пожелание</a>
+          <a href="#counter">До свадьбы осталось</a>
+          <a href="#anketa">Анкета гостя</a>
+        </div>
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">О нас</a>
+      <a href="#date">Дата</a>
+      <a href="#rsvp">Пожелание</a>
+      <a href="#counter">До свадьбы осталось</a>
+      <a href="#anketa">Анкета гостя</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Николай & Евгения</h1>
+        <p style="color: #fff; text-align: center; font-size: 30px">
+          30 AUGUST 2026
+        </p>
+      </div>
+    </section>
+    <div class="content">
+      <section id="about" class="fade-up">
+        <div class="container">
+          <div class="about__wrapp">
+            <div class="about__item">
+              <h2>Дорогие родственики и друзья!</h2>
+              <p>
+                Мы будем рады разделить с вами один из самых выжных дней в нашей
+                жизни. С удовольствием приглошаем вас на знамкнательный праздник
+                - нашу свадьбу.
+              </p>
+              <div class="about__date">08.08.2026</div>
+            </div>
+
+            <div class="about__item">
+              <img src="img/aaa.jpeg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="date" class="fade-up">
+        <div class="container">
+          <div class="wedding-schedule">
+            <div class="wedding-schedule__left">
+              <h2>Где будет проходить свадьба</h2>
+              <p class="venue-desc">
+                Мы будем рады видеть вас на нашей свадьбе! <br />
+                Церемония состоится:
+              </p>
+              <div class="venue-info">
+                <h3>База отдыха “Галдым”</h3>
+                <p>
+                  Тамбовский муниципальный округ, посёлок Голдымское лесничество
+                  квартал 7
+                </p>
+              </div>
+              <div class="map-placeholder">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa65663d3f555eacebcf1c11b0f8931f742016fbfd3e6ef69bfed93366d379926&amp;source=constructor"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="wedding-schedule__right">
+              <h2 class="title">Расписание мероприятия</h2>
+              <ul class="schedule-list">
+                <li class="schedule-item">
+                  <span class="time">15:00</span>
+                  <span class="event">Сбор гостей</span>
+                </li>
+                <li class="schedule-item">
+                  <span class="time">16:00</span>
+                  <span class="event">Церемония</span>
+                </li>
+                <li class="schedule-item">
+                  <span class="time">17:00</span>
+                  <span class="event">Фуршет</span>
+                </li>
+                <li class="schedule-item">
+                  <span class="time">19:00</span>
+                  <span class="event">Банкет</span>
+                </li>
+                <li class="schedule-item">
+                  <span class="time">21:00</span>
+                  <span class="event">Танцы и развлечения</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rsvp" class="rsvp-section">
+        <div class="rsvp-bg"></div>
+        <div class="container rsvp-content fade-up">
+          <h2>Пожелание</h2>
+          <p>Просим вас что там нам подарить в место цветов. Короче хз.</p>
+          <p>Просим вас что там нам подарить в место цветов. Короче хз.</p>
+        </div>
+      </section>
+      <section class="counter" id="counter">
+        <div class="container">
+          <h2 style="text-align: center">До нашей свадьбы осталось...</h2>
+          <div class="timer">
+            <div class="timer-item">
+              <div class="number" id="days">00</div>
+              <div class="label">Дней</div>
+            </div>
+            <div class="timer-item">
+              <div class="number" id="hours">00</div>
+              <div class="label">Часов</div>
+            </div>
+            <div class="timer-item">
+              <div class="number" id="minutes">00</div>
+              <div class="label">Минут</div>
+            </div>
+            <div class="timer-item">
+              <div class="number" id="seconds">00</div>
+              <div class="label">Секунд</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container" id="anketa">
+        <div class="feedback-section">
+          <div class="feedback-image"></div>
+          <div class="feedback-form-container">
+            <h2>Анкета гостя</h2>
+            <form id="rsvp-form">
+              <div class="form-group">
+                <label>Имя и Фамилия</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Введите ваше имя"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Подтверждаете свое присутствие?</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="yes"
+                    name="attendance"
+                    value="Да"
+                    checked
+                  />
+                  <label for="yes">Да, буду</label>
+                  <input type="radio" id="no" name="attendance" value="Нет" />
+                  <label for="no">Не смогу</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Какой вид алкоголя предпочитаете?</label>
+                <select name="alcohol">
+                  <option value="Вино красное">Вино красное</option>
+                  <option value="Вино белое">Вино белое</option>
+                  <option value="Шампанское">Шампанское</option>
+                  <option value="Крепкие напитки">Крепкие напитки</option>
+                  <option value="Не пью">Не пью</option>
+                </select>
+              </div>
+
+              <button type="submit" class="submit-btn" id="submit-button">
+                Отправить
+              </button>
+            </form>
+            <div id="form-status"></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="rsvp" class="fade-up">
+        <div class="container">
+          <h2 style="text-align: center">Мы будем счастливы видеть вас!</h2>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // BURGER
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      // CLOSE MOBILE MENU
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          burger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      document.addEventListener("scroll", () => {
+        const bg = document.querySelector(".rsvp-bg");
+        const section = document.querySelector(".rsvp-section");
+        const sectionRect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // проверяем, если секция видна
+        if (sectionRect.bottom > 0 && sectionRect.top < windowHeight) {
+          // чем дальше прокрутка — тем больше сдвиг
+          const offset = -sectionRect.top * 0.3; // скорость параллакса, можно регулировать
+          bg.style.transform = `translateX(-50%) translateY(${offset}px)`;
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".schedule-item");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          {
+            threshold: 0.3, // 30% элемента в зоне видимости
+          },
+        );
+
+        items.forEach((item) => observer.observe(item));
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const date = document.querySelector(".about__date");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              date.classList.add("show");
+            }
+          });
+        });
+
+        observer.observe(date);
+      });
+
+      const palette = [
+        { r: 244, g: 244, b: 244 },
+        { r: 246, g: 242, b: 243 },
+        { r: 243, g: 236, b: 238 },
+        { r: 240, g: 228, b: 230 },
+        { r: 249, g: 247, b: 247 }, // #f9f7f7
+      ];
+
+      let current = { ...palette[0] };
+      let target = { ...palette[0] };
+
+      function lerp(a, b, t) {
+        return a + (b - a) * t;
+      }
+
+      function getInterpolatedColor(progress) {
+        const segments = palette.length - 1;
+        const scaled = progress * segments;
+        const index = Math.floor(scaled);
+        const localT = scaled - index;
+
+        const c1 = palette[index];
+        const c2 = palette[index + 1] || palette[index];
+
+        return {
+          r: lerp(c1.r, c2.r, localT),
+          g: lerp(c1.g, c2.g, localT),
+          b: lerp(c1.b, c2.b, localT),
+        };
+      }
+
+      function animate() {
+        // плавность (чем меньше число — тем мягче)
+        current.r = lerp(current.r, target.r, 0.02);
+        current.g = lerp(current.g, target.g, 0.02);
+        current.b = lerp(current.b, target.b, 0.02);
+
+        document.body.style.backgroundColor = `rgb(${current.r}, ${current.g}, ${current.b})`;
+
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener("scroll", () => {
+        const maxScroll = document.body.scrollHeight - window.innerHeight;
+        let progress = window.scrollY / maxScroll;
+
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        target = getInterpolatedColor(progress);
+      });
+
+      animate();
+
+      // SCROLL ANIMATION
+      const elements = document.querySelectorAll(".fade-up");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      elements.forEach((el) => observer.observe(el));
+
+      const targetDate = new Date("August 8, 2026 15:00:00").getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const minutes = Math.floor(
+            (difference % (1000 * 60 * 60)) / (1000 * 60),
+          );
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerText =
+            days < 10 ? "0" + days : days;
+          document.getElementById("hours").innerText =
+            hours < 10 ? "0" + hours : hours;
+          document.getElementById("minutes").innerText =
+            minutes < 10 ? "0" + minutes : minutes;
+          document.getElementById("seconds").innerText =
+            seconds < 10 ? "0" + seconds : seconds;
+        } else {
+          document.querySelector(".container").innerHTML =
+            "<h1>День Свадьбы Настал!</h1>";
+        }
+      }
+
+      setInterval(updateTimer, 1000);
+      updateTimer();
+
+      // Обработчик формы
+      document
+        .getElementById("rsvp-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const status = document.getElementById("form-status");
+          const btn = document.getElementById("submit-button");
+          const formData = new FormData(this);
+
+          btn.disabled = true;
+          status.innerText = "Отправка...";
+
+          // Замените 'send_mail.php' на путь к вашему скрипту
+          fetch("send_mail.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                status.style.color = "green";
+                status.innerText = "Спасибо! Ваше сообщение отправлено.";
+                this.reset();
+              } else {
+                throw new Error();
+              }
+            })
+            .catch(() => {
+              status.style.color = "red";
+              status.innerText = "Ошибка при отправке. Попробуйте позже.";
+            })
+            .finally(() => {
+              btn.disabled = false;
+            });
+        });
+    </script>
+  </body>
+</html>
